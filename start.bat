@@ -1,0 +1,1 @@
+java -jar SeaBattle_TestTask.jar
