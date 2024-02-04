@@ -168,9 +168,16 @@ public class TwoPlayersGame{
             }
             System.out.println("Введите координату X:");
             int x = scanner.nextInt();
+            if (x < 0 || x >= battlefield.length) {
+                System.out.println("Вы ввели неверную координату попробуйте еще раз!.");
+                continue;
+            }
             System.out.println("Введите координату Y:");
             int y = scanner.nextInt();
-
+            if (y < 0 || y >= battlefield[0].length) {
+                System.out.println("Вы ввели неверную координату попробуйте еще раз!.");
+                continue;
+            }
             if (battlefield[x][y].getValue() == 1) {
                 System.out.println("Попадание! Сделайте ход еще раз!");
                 monitor[x][y].setValue(2);
